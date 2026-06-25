@@ -71,12 +71,41 @@ return packer.startup(function(use)
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
 	}) -- enhanced lsp uis
-	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
 	-- formatting & linting
 	use("nvimtools/none-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+
+	use({
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = function()
+			require("toggleterm").setup({
+				size = 15,
+				shade_filetypes = {},
+				shade_terminals = true,
+				shade_factor = 3,
+				start_in_insert = true,
+				persist_size = true,
+				shell = vim.o.shell,
+				close_on_exit = true,
+				direction = "horizontal",
+			})
+			vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
+			vim.keymap.set("t", "<C-\\>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
+		end,
+	})
+	use({
+		"folke/which-key.nvim",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		config = function()
+			require("which-key").setup()
+		end,
+	})
 
 	-- treesitter configuration
 	use({

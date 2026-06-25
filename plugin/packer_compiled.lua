@@ -216,10 +216,11 @@ _G.packer_plugins = {
     path = "/Users/adwaithvenkatesh/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["typescript.nvim"] = {
+  ["toggleterm.nvim"] = {
+    config = { "\27LJ\2\n˜\3\0\0\6\0\17\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\0\0=\3\4\0026\3\5\0009\3\6\0039\3\a\3=\3\a\2B\0\2\0016\0\5\0009\0\b\0009\0\t\0'\2\n\0'\3\v\0'\4\f\0005\5\r\0B\0\5\0016\0\5\0009\0\b\0009\0\t\0'\2\14\0'\3\15\0'\4\f\0005\5\16\0B\0\5\1K\0\1\0\1\0\1\tdesc\20Toggle terminal\n<C-\\>\6t\1\0\1\tdesc\20Toggle terminal\24<cmd>ToggleTerm<cr>\14<leader>t\6n\bset\vkeymap\nshell\6o\bvim\20shade_filetypes\1\0\t\20shade_filetypes\0\tsize\3\15\18close_on_exit\2\14direction\15horizontal\nshell\0\17persist_size\2\20start_in_insert\2\17shade_factor\3\3\20shade_terminals\2\nsetup\15toggleterm\frequire\0" },
     loaded = true,
-    path = "/Users/adwaithvenkatesh/.local/share/nvim/site/pack/packer/start/typescript.nvim",
-    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
+    path = "/Users/adwaithvenkatesh/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["vim-maximizer"] = {
     loaded = true,
@@ -240,10 +241,24 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/adwaithvenkatesh/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["which-key.nvim"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14which-key\frequire\0" },
+    loaded = true,
+    path = "/Users/adwaithvenkatesh/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n˜\3\0\0\6\0\17\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\0\0=\3\4\0026\3\5\0009\3\6\0039\3\a\3=\3\a\2B\0\2\0016\0\5\0009\0\b\0009\0\t\0'\2\n\0'\3\v\0'\4\f\0005\5\r\0B\0\5\0016\0\5\0009\0\b\0009\0\t\0'\2\14\0'\3\15\0'\4\f\0005\5\16\0B\0\5\1K\0\1\0\1\0\1\tdesc\20Toggle terminal\n<C-\\>\6t\1\0\1\tdesc\20Toggle terminal\24<cmd>ToggleTerm<cr>\14<leader>t\6n\bset\vkeymap\nshell\6o\bvim\20shade_filetypes\1\0\t\20shade_filetypes\0\tsize\3\15\18close_on_exit\2\14direction\15horizontal\nshell\0\17persist_size\2\20start_in_insert\2\17shade_factor\3\3\20shade_terminals\2\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

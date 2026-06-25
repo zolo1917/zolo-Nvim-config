@@ -9,6 +9,8 @@ keymap.set("i", "jk", "<ESC>") -- use jk to get out of insert mode
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- in normal mode leader+nh will remove highlighting
 keymap.set("n", "x", '"_x') -- in normal mode hitting x will delete the charecter but will not copy to the clipboard
 
+keymap.set("i", "<C-BS>", "<C-w>", { desc = "Delete previous word" }) -- in insert mode hitting ctrl+backspace will delete the previous word
+
 keymap.set("n", "<leader>+", "<C-a>") -- increment the number in normal mode
 keymap.set("n", "<leader>-", "<C-x>") -- decrement the number in normal mode
 
